@@ -1,1 +1,1 @@
-export { AuthenticationPage } from "./AuthenticationPage";
+export { AuthenticationPage } from './AuthenticationPage';
