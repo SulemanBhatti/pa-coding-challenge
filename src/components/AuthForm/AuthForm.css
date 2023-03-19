@@ -81,7 +81,9 @@ label {
   box-sizing: border-box;
 }
 
-/* media queries for mobile responsiveness, still can be improved as per design */
+/* media queries for mobile responsiveness */
+/* TODO: can be improved as per design */
+
 @media only screen and (max-width: 600px) {
   .form__wrapper {
     border: 2px solid #000;
