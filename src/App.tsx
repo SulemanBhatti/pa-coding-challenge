@@ -6,7 +6,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<AuthenticationPage />} />
+        <Route path="/signup" element={<AuthenticationPage />} />
       </Routes>
     </Router>
   );

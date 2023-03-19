@@ -8,6 +8,8 @@ export const AuthForm: React.FC = () => {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
+  const { validations, isAuthenticated } = getValidations(password);
+
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
@@ -19,9 +21,7 @@ export const AuthForm: React.FC = () => {
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const isValid = getValidations(password).every((i) => i.isValid);
-
-    if (isValid) {
+    if (isAuthenticated) {
       alert('Congratulation! You have successfully logged in!');
     }
   };
@@ -47,10 +47,7 @@ export const AuthForm: React.FC = () => {
               label="Password"
               onChange={handlePasswordChange}
             />
-            <AuthValidationItem
-              validations={getValidations(password)}
-              className="validation__list"
-            />
+            <AuthValidationItem validations={validations} className="validation__list" />
             <button type="submit">Submit</button>
           </div>
         </form>
