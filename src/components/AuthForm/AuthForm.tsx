@@ -1,4 +1,5 @@
 import React from 'react';
+import { getValidations } from '../../utils/getValidations';
 import { AuthValidationItem } from '../AuthValidationItem/AuthValidationItem';
 import { InputField } from '../InputField';
 import './AuthForm.css';
@@ -14,6 +15,10 @@ export const AuthForm: React.FC = () => {
   const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
+
+  // const isValid = getValidations(password).every((i) => i.isValid);
+
+  // console.log('isValid', isValid);
 
   return (
     <div className="container">
@@ -36,7 +41,10 @@ export const AuthForm: React.FC = () => {
               label="Password"
               onChange={handlePasswordChange}
             />
-            <AuthValidationItem text={password} className="validation__list" />
+            <AuthValidationItem
+              validations={getValidations(password)}
+              className="validation__list"
+            />
             <button type="submit">Submit</button>
           </div>
         </form>

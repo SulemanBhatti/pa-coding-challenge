@@ -1,6 +1,9 @@
 export type AuthValdationProps = {
-  text: string;
   className: string;
+  validations: (
+    | { text: string; isValid: boolean }
+    | { text: string; isValid: RegExpMatchArray | null }
+  )[];
 };
 
 export type InputFieldProps = {
