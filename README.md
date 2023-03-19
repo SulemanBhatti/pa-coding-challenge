@@ -4,6 +4,7 @@
 
 # Architecture and Improvements needed
 
+- Prettier and Eslint linters are added for better/faster development experience
 - Initial rendering would be at / route and there is a button to route to signup page
 - Components, Pages, Utils, Types and other folders are created for separation of concern
 - Each component have its own folder and CSS file if needed
