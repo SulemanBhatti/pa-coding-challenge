@@ -59,6 +59,12 @@ label {
   font-size: larger;
 }
 
+.validation__list {
+  list-style: none;
+  padding: 13px 0 32px 0;
+  display: flex;
+}
+
 * {
   box-sizing: border-box;
 }

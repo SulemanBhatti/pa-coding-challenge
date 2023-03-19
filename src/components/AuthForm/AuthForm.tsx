@@ -1,4 +1,5 @@
 import React from 'react';
+import { AuthValidation } from '../AuthValidation';
 import './AuthForm.css';
 
 export const AuthForm: React.FC = () => {
@@ -13,6 +14,7 @@ export const AuthForm: React.FC = () => {
           <div className="second__column__wrapper">
             <label htmlFor="Password">Password</label>
             <input type="Password" placeholder="Password" />
+            <AuthValidation text="8 characters minimum" className="validation__list" />
             <button type="submit">Submit</button>
           </div>
         </form>
