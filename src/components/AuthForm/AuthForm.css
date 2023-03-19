@@ -1,23 +1,43 @@
-/* needs improvments and created just for basis of intial commit */
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-content: center;
+  align-items: center;
+}
 
 form {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  height: 50%;
+  display: table;
+  clear: both;
+  width: 100%;
+  margin: 20px;
+}
+
+.form__wrapper {
   border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  height: 50%;
+}
+
+.form__input__wrapper {
+  float: left;
+  width: 50%;
   padding: 10px;
+  display: grid;
 }
 
 input {
-  height: 40px;
+  height: 60px;
   margin: 10px 0;
   padding: 0 10px;
   border: 2px solid #000;
 }
 
 button {
-  height: 40px;
+  height: 60px;
+  width: 100%;
   border: 2px solid #000;
   background-color: black;
   border: none;
@@ -30,15 +50,6 @@ button {
   cursor: pointer;
 }
 
-.form__wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-}
-
-.form__input {
-  display: contents;
+* {
+  box-sizing: border-box;
 }
