@@ -1,5 +1,6 @@
 import React from 'react';
-import { AuthValidation } from '../AuthValidation';
+import { AuthValidationItem } from '../AuthValidationItem/AuthValidationItem';
+import { InputField } from '../InputField';
 import './AuthForm.css';
 
 export const AuthForm: React.FC = () => {
@@ -7,14 +8,28 @@ export const AuthForm: React.FC = () => {
     <div className="container">
       <div className="form__wrapper">
         <form>
-          <div className="first__column__wrapper">
-            <label htmlFor="Email">Email</label>
-            <input type="Email" placeholder="Email" />
-          </div>
+          <InputField
+            className="first__column__wrapper"
+            type="email"
+            value=""
+            placeholder="Email"
+            label="Email"
+            onChange={(e) => {
+              console.log(e);
+            }}
+          />
           <div className="second__column__wrapper">
-            <label htmlFor="Password">Password</label>
-            <input type="Password" placeholder="Password" />
-            <AuthValidation text="8 characters minimum" className="validation__list" />
+            <InputField
+              className="password__wrapper"
+              type="email"
+              value=""
+              placeholder="Password"
+              label="Password"
+              onChange={(e) => {
+                console.log(e);
+              }}
+            />
+            <AuthValidationItem text="8 characters minimum" className="validation__list" />
             <button type="submit">Submit</button>
           </div>
         </form>
