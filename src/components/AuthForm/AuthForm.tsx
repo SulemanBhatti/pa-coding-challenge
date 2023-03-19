@@ -36,7 +36,7 @@ export const AuthForm: React.FC = () => {
               label="Password"
               onChange={handlePasswordChange}
             />
-            <AuthValidationItem text="8 characters minimum" className="validation__list" />
+            <AuthValidationItem text={password} className="validation__list" />
             <button type="submit">Submit</button>
           </div>
         </form>

@@ -66,13 +66,13 @@ label {
 .validation__list {
   list-style: none;
   padding: 13px 0 32px 0;
-  display: flex;
   align-items: center;
 }
 
-.validation__list p {
-  padding-left: 5px;
-  margin: 0px;
+.validation__list div {
+  list-style: none;
+  align-items: center;
+  display: flex;
 }
 
 * {
