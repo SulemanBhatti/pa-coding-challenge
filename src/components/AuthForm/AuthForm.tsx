@@ -16,14 +16,20 @@ export const AuthForm: React.FC = () => {
     setPassword(e.target.value);
   };
 
-  // const isValid = getValidations(password).every((i) => i.isValid);
+  const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-  // console.log('isValid', isValid);
+    const isValid = getValidations(password).every((i) => i.isValid);
+
+    if (isValid) {
+      alert('Congratulation! You have successfully logged in!');
+    }
+  };
 
   return (
     <div className="container">
       <div className="form__wrapper">
-        <form>
+        <form onSubmit={onSubmitHandler}>
           <InputField
             className="first__column__wrapper"
             type="email"
