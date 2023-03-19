@@ -1,3 +1,18 @@
+## This project is created for the sake of case study
+
+# Details of how to run this app are given below
+
+# Architecture and Improvements needed
+
+- Initial rendering would be at / route and there is a button to route to signup page
+- Components, Pages, Utils, Types and other folders are created for separation of concern
+- Each component have its own folder and CSS file if needed
+- Exported the files from index.ts file for easier importing syntax
+- Tests are written for only few but can be be added for all of them including utils functions
+- CSS architecture could be improved using SASS for better scalability
+- TailwindCSS can be used for better, faster and lightweight components
+- Assets can be managed using CDN other than having them in app for small builds
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
