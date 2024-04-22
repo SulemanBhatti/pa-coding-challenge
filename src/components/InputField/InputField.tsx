@@ -9,6 +9,9 @@ export const InputField: React.FC<InputFieldProps> = ({
   className,
   onChange,
 }) => {
+  // eslint-disable-next-line prettier/prettier
+  console.log('Hello Console');
+
   return (
     <div className={className}>
       <label htmlFor={placeholder}>{label}</label>
